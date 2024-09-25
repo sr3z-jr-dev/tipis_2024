@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 
+
+# СПИСОК ОТВЕТОВ В КОНЦЕ ФАЙЛА !!
+
 url = "https://raw.githubusercontent.com/Yorko/mlcourse.ai/main/data/"
 data = pd.read_csv(url + "adult.data.csv")
 
@@ -39,3 +42,18 @@ else:
 
 #task 6
 print("\n################### [ ВОПРОС №6 ] ###################")
+
+
+
+
+
+"""
+ОТВЕТЫ:
+1) 15
+2) 0
+3) 5
+4) 40.0
+5) Male
+6) ???
+
+"""
