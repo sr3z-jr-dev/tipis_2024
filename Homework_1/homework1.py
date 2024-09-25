@@ -42,8 +42,15 @@ else:
 
 #task 6
 print("\n################### [ ВОПРОС №6 ] ###################")
+for column in data.columns:
+    most_common_value = data[column].mode()[0]
+    data[column] = data[column].fillna(most_common_value)
 
-
+missing_data_after = data.isnull().sum()
+if missing_data_after.sum() == 0:
+    print("Все пропущенные данные успешно заполнены.")
+else:
+    print(f"Остались пропуски:\n{missing_data_after[missing_data_after > 0]}")
 
 
 
@@ -54,6 +61,12 @@ print("\n################### [ ВОПРОС №6 ] ###################")
 3) 5
 4) 40.0
 5) Male
-6) ???
+6) Другие методы заполнения пропусков:
+     * Средним значением
+     * Медианой
+     * Метод интерполяции
+     * Заполнение специальными значениями (например, "Unknown", 0, -1)
+     * Удаление строк или столбцов с пропусками
+     * Алгоритмы машинного обучения
 
 """
